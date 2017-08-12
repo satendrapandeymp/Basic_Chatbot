@@ -1,0 +1,18 @@
+mysql -u "root" -p
+***** (Fill your password -- Default password is empty so you can enter without typing anything)
+
+create database flask;
+
+use flask;
+
+CREATE TABLE auth_chatbot (username VARCHAR(24), email VARCHAR(40),password VARCHAR(24),time TIME, is_active binary);
+
+For creating new user-- 
+
+CREATE USER 'pandey'@'localhost' IDENTIFIED BY '  ';
+
+GRANT ALL ON flask.* TO 'pandey'@'localhost';
+
+flush privilages;
+
+

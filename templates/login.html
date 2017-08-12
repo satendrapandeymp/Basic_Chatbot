@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style media="screen">
+  .container{padding-left: 120px;
+        padding-top: 50px; }
+  body { padding-left: 50px; padding-top: 50px; background: rgb(230,240,250);}
+</style>
+
+
+<h1></h1>
+<div class="container">
+<div class="col-lg-4">
+<div class = "panel panel-info">
+<div class = "panel-heading">
+<h3 class = "panel-title">Please Login</h3>
+</div>
+<div id="test">
+<div class = "panel-body">
+  <form action="" method="post" class="form-signin">
+
+	<label for="inputEmail" class="sr-only">Enter Username</label>
+	<input type="text" id="inputUsername" class="form-control" placeholder="Enter Your Username Here" name="username" value="{{request.form.username }}" required autofocus> <br>
+	<label for="inputPassword" class="sr-only">Enter Password</label>
+	<input type="password" id="inputPassword" class="form-control" placeholder="Enter Your Password Here" name="password" value="{{request.form.password }}" required>
+
+	<div class="checkbox">
+	  <label><input type="checkbox" value="remember-me"> Remember me</label>
+	</div>
+
+        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Login">
+      </form>
+      <br>   <a href="/register">click</a> here to register
+      </div>
+
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

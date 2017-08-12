@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script hrerf="/static/jquery.min.js"></script>
+   <link href="/static/bootstrap.min.css" rel="stylesheet">
+   <link href="/static/font-awesome.min.css" rel="stylesheet">
+   <style media="screen">
+     .all{padding-left: 30px; padding-right: 30px; padding-top: 30px;}
+   </style>
+  </head>
+  <body>
+
+      <div class="all">
+
+        {% block content %}
+
+
+        {% endblock %}
+
+
+      <!-- errors -->
+
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}</p>
+      {% endif %}
+      {% for message in get_flashed_messages() %}
+        {{ message }}
+      {% endfor %}
+
+      <!-- messages -->
+
+    </div>
+
+  </body>
+</html>
